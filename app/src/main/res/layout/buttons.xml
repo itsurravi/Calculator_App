@@ -20,7 +20,7 @@
             android:fontFamily="@font/g_light"
             android:text="AC"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -34,7 +34,7 @@
             android:fontFamily="@font/g_light"
             android:text="%"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -48,7 +48,7 @@
             android:fontFamily="@font/g_light"
             android:text="÷"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -62,7 +62,7 @@
             android:fontFamily="@font/g_light"
             android:text="C"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -76,7 +76,7 @@
             android:fontFamily="@font/g_light"
             android:text="7"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -90,7 +90,7 @@
             android:fontFamily="@font/g_light"
             android:text="8"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -104,7 +104,7 @@
             android:fontFamily="@font/g_light"
             android:text="9"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -118,7 +118,7 @@
             android:fontFamily="@font/g_light"
             android:text="×"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
@@ -133,7 +133,7 @@
             android:fontFamily="@font/g_light"
             android:text="4"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -147,7 +147,7 @@
             android:fontFamily="@font/g_light"
             android:text="5"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -161,7 +161,7 @@
             android:fontFamily="@font/g_light"
             android:text="6"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -175,7 +175,7 @@
             android:fontFamily="@font/g_light"
             android:text="-"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
@@ -190,7 +190,7 @@
             android:fontFamily="@font/g_light"
             android:text="1"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -204,7 +204,7 @@
             android:fontFamily="@font/g_light"
             android:text="2"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -218,7 +218,7 @@
             android:fontFamily="@font/g_light"
             android:text="3"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -232,7 +232,7 @@
             android:fontFamily="@font/g_light"
             android:text="+"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
@@ -247,7 +247,7 @@
             android:fontFamily="@font/g_light"
             android:text="0"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -261,7 +261,7 @@
             android:fontFamily="@font/g_light"
             android:text="."
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -275,7 +275,7 @@
             android:fontFamily="@font/g_light"
             android:text="()"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -289,7 +289,7 @@
             android:fontFamily="@font/g_light"
             android:text="="
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </GridLayout>

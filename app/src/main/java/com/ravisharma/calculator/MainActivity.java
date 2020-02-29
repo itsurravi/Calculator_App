@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,12 +14,11 @@ import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity {
 
-
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9,
             btnPercent, btnPlus, btnMinus, btnMultiply, btnDivision, btnEqual,
             btnAllClear, btnClear, btnDot, btnBracket;
 
-    TextView tvInput, tvOutput;
+    TextView tvInput, tvOutput, tvHistory;
 
     String process = "";
     boolean checkBracket = false;
@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
 
         tvInput = findViewById(R.id.tvInput);
         tvOutput = findViewById(R.id.tvOutput);
+        tvHistory = findViewById(R.id.tvHistory);
+
+        tvHistory.setText("");
+        tvHistory.setMovementMethod(new ScrollingMovementMethod());
 
         btnAllClear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,7 +158,10 @@ public class MainActivity extends AppCompatActivity {
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (process.length() == 0 || process.charAt(process.length() - 1) == '+') {
+                if (process.length() == 0) {
+                    return;
+                }
+                if (process.charAt(process.length() - 1) == '+') {
                     return;
                 }
                 if (process.charAt(process.length() - 1) == '-' ||
@@ -177,7 +184,10 @@ public class MainActivity extends AppCompatActivity {
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (process.length() == 0 || process.charAt(process.length() - 1) == '-') {
+                if (process.length() == 0) {
+                    return;
+                }
+                if (process.charAt(process.length() - 1) == '-') {
                     return;
                 }
                 if (process.charAt(process.length() - 1) == '+' ||
@@ -198,7 +208,10 @@ public class MainActivity extends AppCompatActivity {
         btnMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (process.length() == 0 || process.charAt(process.length() - 1) == '×') {
+                if (process.length() == 0) {
+                    return;
+                }
+                if (process.charAt(process.length() - 1) == '×') {
                     return;
                 }
                 if (process.charAt(process.length() - 1) == '+' ||
@@ -219,7 +232,10 @@ public class MainActivity extends AppCompatActivity {
         btnDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (process.length() == 0 || process.charAt(process.length() - 1) == '/') {
+                if (process.length() == 0) {
+                    return;
+                }
+                if (process.charAt(process.length() - 1) == '/') {
                     return;
                 }
                 if (process.charAt(process.length() - 1) == '+' ||
@@ -252,7 +268,10 @@ public class MainActivity extends AppCompatActivity {
         btnPercent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (process.length() == 0 || process.charAt(process.length() - 1) == '%') {
+                if (process.length() == 0) {
+                    return;
+                }
+                if (process.charAt(process.length() - 1) == '%') {
                     return;
                 }
                 if (process.charAt(process.length() - 1) == '-' ||
@@ -292,8 +311,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 process = tvInput.getText().toString();
+                if (!process.isEmpty()) {
 
-                calculateResult();
+                    if ((process.contains("+") || process.contains("×") ||
+                            process.contains("%") || process.contains("/") || process.contains("-"))) {
+                        if (process.charAt(process.length() - 1) == '%') {
+                            calculateResult();
+                        } else if (!(process.charAt(process.length() - 1) == '+' || process.charAt(process.length() - 1) == '-'
+                                || process.charAt(process.length() - 1) == '/' || process.charAt(process.length() - 1) == '×')) {
+                            calculateResult();
+                        }
+                    }
+                }
             }
         });
 
@@ -301,6 +330,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateResult() {
+        tvHistory.append("\n" + process);
+        tvHistory.append("\n=");
         process = process.replaceAll("×", "*");
         process = process.replaceAll("%", "/100");
         process = process.replaceAll("÷", "/");
@@ -320,5 +351,6 @@ public class MainActivity extends AppCompatActivity {
 
         tvOutput.setText(finalResult);
         tvInput.setText("");
+        tvHistory.append(finalResult);
     }
 }
